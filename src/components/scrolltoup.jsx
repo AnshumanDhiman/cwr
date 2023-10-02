@@ -31,12 +31,12 @@ const ScrollToTopButton = () => {
 
   return (
     <button
-      className={`fixed bottom-4 right-4 p-2 bg-gradient-to-r from-blue-700 to-blue-800 text-theme_4 z-[999] rounded-full shadow-lg transition-opacity transform ${
+      className={`fixed bottom-4 right-4 p-2 bg-gradient-to-r from-blue-700 to-blue-800 text-theme_4 z-[999] rounded-sm shadow-lg transition-opacity transform ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       } duration-500`}
       onClick={scrollToTop}
     >
-      <FaArrowUp size={20} className="text-white" />
+      <FaArrowUp size={16} className="text-white" />
     </button>
   );
 };
