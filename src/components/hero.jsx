@@ -45,7 +45,7 @@ export default function Hero() {
         </div>
       </section>
 
-      <header className="bg-white" id="about">
+      <header className="bg-white mt-10" id="about">
         <div className="container px-28 py-20 mx-auto">
           <div className="items-center lg:flex">
             <div className="w-full lg:w-1/2">
