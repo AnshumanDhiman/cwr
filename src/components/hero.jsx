@@ -1,6 +1,6 @@
 import heroImg from "../assets/working.svg";
 import Card from "./cards";
-import card_data from "./card_data";
+import Cards from './cards'
 
 function createCard(card_data) {
   return (
@@ -59,9 +59,8 @@ export default function Hero() {
         </div>
       </header>
 
-      <div className="grid grid-cols-4 px-32 gap-8 py-16">
-        {card_data.map(createCard)}
-      </div>
+      <Card/>
+      
     </>
   );
 }
