@@ -4,7 +4,7 @@ import Card from "./cards";
 
 export default function Hero() {
   return (
-    <>
+     <>
       <div className="relative grid w-full bg-gradient-to-r from-blue-500 to-blue-800 h-[25rem] items-center">
       <div className="px-28 py-8">
           <div className="items-center flex">
