@@ -1,18 +1,16 @@
-import heroImg from "../assets/working.svg";
-import Card from "./cards";
-
-
-export default function Hero() {
+import React from 'react'
+import heroImg from "../../assets/working.svg";
+export default function Cloud() {
   return (
     <>
-      <div className="relative grid w-full bg-gradient-to-r from-blue-500 to-blue-800 h-[30rem] items-center">
+        <div>
+        <div className="relative grid w-full bg-gradient-to-r from-green-600 to-green-800 h-[30rem] items-center">
       <div className="px-28 py-8">
           <div className="items-center flex">
             <div className="w-full lg:w-1/2">
               <h1 className="text-4xl font-bold text-[#F5F5F5]">
-                Managed IT Solutions for
-                <br />
-                growing your<span className="text-white"> Business</span>
+               Cloud Services
+             
               </h1>
 
               <p className="mt-3 text-white">
@@ -31,8 +29,8 @@ export default function Hero() {
         </div>
 
       </div>
-      <Card/>
-      
+        </div>
+        <br/><br/><br/><br/><br/><br/>
     </>
-  );
+  )
 }

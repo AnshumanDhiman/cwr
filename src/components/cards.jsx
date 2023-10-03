@@ -6,7 +6,7 @@ function Card() {
   return (
     <>
 
-      <div className="grid grid-cols-4 px-32 gap-8 py-16">
+      <div className="grid grid-cols-4 px-32 gap-8 py-16 mt-20">
       <div
         className="p-8 rounded-2xl shadow-xl bg-white cursor-pointer transition ease-in-out hover:scale-110 border-t-[16px] border-[#00C0E8] "
       >

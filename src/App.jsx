@@ -3,6 +3,10 @@ import Contact from "./pages/Contact";
 import Services from "./pages/Services";
 import Solutions from "./pages/Solutions";
 import Home from "./pages/home";
+import Cloud from './pages/services/Cloud'
+import ManagedIT from './pages/services/ManagedIT'
+import Security from './pages/services/Security'
+import Software from './pages/services/Software'
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -14,6 +18,10 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/solutions" element={<Solutions />} />
         <Route path="/about" element={<About />} />
+        <Route path="/cloud" element={<Cloud />} />
+        <Route path="/software" element={<Software />} />
+        <Route path="/security" element={<Security />} />
+        <Route path="/managed-it" element={<ManagedIT />} />
       </Routes>
     </>
   );
