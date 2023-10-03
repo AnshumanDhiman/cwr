@@ -1,14 +1,16 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logo.svg";
+import logo1 from "../assets/l.png";
 
 export default function Navbar() {
   return (
     <>
       <nav className="bg-white sticky top-0 z-50 shadow-lg">
-        <div className="container px-36 py-8 mx-auto md:flex md:justify-between md:items-center">
+        <div className="container px-24 py-4 mx-auto md:flex md:justify-between md:items-center">
           <div className="flex items-center justify-between">
             <Link to="/">
-              <img className="w-auto h-15 sm:h-12" src={logo} alt="" />
+              <img className="w-auto h-[4rem] inline mb-[10px]" src={logo1} alt="" />
+              <h1 className="text-2xl text-gray-800 font-bold space-x-4 inline ml-[10px]">CWR Technologies</h1>
             </Link>
 
             {/* <div className="flex md:hidden">
