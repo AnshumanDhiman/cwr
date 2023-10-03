@@ -43,7 +43,7 @@ export default function Hero() {
             </a>
           </div>
         </div>
-      </section>
+      </section>  
 
       <header className="bg-white mt-10" id="about">
         <div className="container px-28 py-20 mx-auto">
