@@ -8,6 +8,7 @@ import ManagedIT from './pages/services/ManagedIT'
 import Security from './pages/services/Security'
 import Software from './pages/services/Software'
 import { Route, Routes } from "react-router-dom";
+import Notfound from "./pages/Notfound";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/software" element={<Software />} />
         <Route path="/security" element={<Security />} />
         <Route path="/managed-it" element={<ManagedIT />} />
+        {/* <Route path="/*" element={<PageNotFound />} /> */}
       </Routes>
     </>
   );
