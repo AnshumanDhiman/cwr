@@ -3,188 +3,271 @@ import { useState } from "react";
 import logo from "../assets/logo.svg";
 import logo1 from "../assets/logo1.png";
 
+  
+    
+import { Fragment } from 'react'
+import { Disclosure, Menu, Transition } from '@headlessui/react'
+import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 export default function Navbar() {
-  const [isDropdownOpen1, setIsDropdownOpen1] = useState(false);
-  const [isDropdownOpen2, setIsDropdownOpen2] = useState(false);
-  const [isDropdownOpen3, setIsDropdownOpen3] = useState(false);
 
-  const handleDropdownLinkClick1 = () => {
-    closeMenu();
-    toggleDropdown1();
-  };
 
-  const handleDropdownLinkClick2 = () => {
-    closeMenu();
-    toggleDropdown2();
-  };
+const navigation = [
+  { name: 'Home', href: '/', current: true },
+  { name: 'About', href: '/about', current: false },
+  { name: 'Contact', href: '/contact', current: false },
+]
 
-  const handleDropdownLinkClick3 = () => {
-    closeMenu();
-    toggleDropdown2();
-  };
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
 
-  const toggleDropdown1 = () => {
-    setIsDropdownOpen1(!isDropdownOpen1);
-  };
-
-  const toggleDropdown2 = () => {
-    setIsDropdownOpen2(!isDropdownOpen2);
-  };
-
-  const toggleDropdown3 = () => {
-    setIsDropdownOpen3(!isDropdownOpen3);
-  };
 
   return (
     <>
-      <nav className="bg-white sticky top-0 z-50 shadow-lg">
-        <div className="container px-24 py-6 mx-auto md:flex md:justify-between md:items-center">
-          <div className="flex items-center justify-between">
-            <Link to="/">
-              <img className="w-auto h-[2.75rem] inline" src={logo1} alt="" />
-              <h1 className="text-2xl text-gray-800 font-bold space-x-4 inline ml-[20px]">
-                CWR Technologies
-              </h1>
-            </Link>
-          </div>
-
-          <div className="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white  md:bg-transparent  md:mt-0 md:p-0 md:top-0 md:relative md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
-            <div className="flex flex-col md:flex-row md:mx-6">
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  isActive
-                    ? "my-2 transition-colors duration-300 transform text-blue-500 md:mx-4 md:my-0"
-                    : "my-2 text-gray-700 transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
-                }
-              >
-                Home
-              </NavLink>
-              <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                  isActive
-                    ? "my-2 transition-colors duration-300 transform text-blue-500 md:mx-4 md:my-0"
-                    : "my-2 text-gray-700 transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
-                }
-              >
-                About
-              </NavLink>
-              <NavLink
-                onClick={toggleDropdown1}
-                className="my-2 transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
-              >
-                <span className="relative">Services ▾</span>
-              </NavLink>
-              {isDropdownOpen1 && (
-                <ul className="dropdown-list absolute  bg-white shadow-xl mt-10 ml-40 border-2 ">
-                  <NavLink
-                    to="/cloud"
-                    onClick={handleDropdownLinkClick1}
-                  >
-                    <li className=" bg-white hover:bg-blue-700 hover:text-white p-4">
-                      Cloud Services
-                    </li>
-                  </NavLink>
-                  <NavLink to="/managed-it" onClick={handleDropdownLinkClick1}>
-                    <li className=" bg-white hover:bg-blue-700 hover:text-white p-4">
-                      Managed IT Services
-                    </li>
-                  </NavLink>
-                  <NavLink
-                    to="/security"
-                    onClick={handleDropdownLinkClick1}
-                  >
-                    <li className=" bg-white hover:bg-blue-700 hover:text-white p-4">
-                      Security Services
-                    </li>
-                  </NavLink>
-                  <NavLink
-                    to="/software"
-                    onClick={handleDropdownLinkClick1}
-                  >
-                    <li className=" bg-white hover:bg-blue-700 hover:text-white p-4">
-                      Software Development
-                    </li>
-                  </NavLink>
-                </ul>
-              )}
-
-              <NavLink
-                onClick={toggleDropdown2}
-                className="my-2 transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
-              >
-                <span className="relative">Products ▾</span>
-              </NavLink>
-              {isDropdownOpen2 && (
-                <ul className="dropdown-list absolute  bg-white shadow-xl mt-10 ml-[46%] border-2 ">
-                  <NavLink
-                    to="/cloud"
-                    onClick={handleDropdownLinkClick2}
-                  >
-                    <li className=" bg-white hover:bg-blue-700 hover:text-white p-4">
-                      Cyber Aware Security
-                    </li>
-                  </NavLink>
-                  </ul>
-              )}
-
-              <NavLink
-                onClick={toggleDropdown3}
-                className="my-2 transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
-              >
-                <span className="relative">Courses ▾</span>
-              </NavLink>
-              {isDropdownOpen3 && (
-                <ul className="dropdown-list absolute  bg-white shadow-xl mt-10 ml-[60%] border-2 ">
-                  <NavLink
-                    to="/cloud"
-                    onClick={handleDropdownLinkClick3}
-                  >
-                    <li className=" bg-white hover:bg-blue-700 hover:text-white p-4">
-                      Cloud Security
-                    </li>
-                  </NavLink>
-                  <NavLink to="/managed-it" onClick={handleDropdownLinkClick3}>
-                    <li className=" bg-white hover:bg-blue-700 hover:text-white p-4">
-                      Cyber Offence & Defence
-                    </li>
-                  </NavLink>
-                  <NavLink
-                    to="/security"
-                    onClick={handleDropdownLinkClick3}
-                  >
-                    <li className=" bg-white hover:bg-blue-700 hover:text-white p-4">
-                      DevOps
-                    </li>
-                  </NavLink>
-                  <NavLink
-                    to="/software"
-                    onClick={handleDropdownLinkClick3}
-                  >
-                    <li className=" bg-white hover:bg-blue-700 hover:text-white p-4">
-                      Data Privacy
-                    </li>
-                  </NavLink>
-                </ul>
-              )}
 
 
-             
-              <NavLink
-                to="/contact"
-                className={({ isActive }) =>
-                  isActive
-                    ? "my-2 transition-colors duration-300 transform text-blue-500 md:mx-4 md:my-0"
-                    : "my-2 text-gray-700 transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
-                }
-              >
-                Contact
-              </NavLink>
+    <Disclosure as="nav" className="">
+      {({ open }) => (
+        <>
+          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-4">
+            <div className="relative flex h-20 items-center justify-between">
+              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                {/* Mobile menu button*/}
+                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <span className="absolute -inset-0.5" />
+                  <span className="sr-only">Open main menu</span>
+                  {open ? (
+                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                  ) : (
+                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                  )}
+                </Disclosure.Button>
+              </div>
+              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                <div className="flex flex-shrink-0 items-center">
+                  <img
+                    className="h-10 w-auto"
+                    src={logo1}
+                    alt="Your Company"
+                  />
+                  <h1 className="ml-4 text-gray-700 font-bold text-2xl">CWR Technologies</h1>
+                </div>
+              </div>
+
+
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <div className="hidden sm:ml-6 sm:block">
+                  <div className="flex space-x-4">
+                    {navigation.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className={classNames(
+                          item.current ? 'text-gray-700 transition-colors duration-300 transform hover:text-blue-500' : 'text-gray-700 transition-colors duration-300 transform hover:text-blue-500',
+                          'rounded-md px-3 py-2 text-md font-medium'
+                        )}
+                        aria-current={item.current ? 'page' : undefined}
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+                {/* Profile dropdown */}
+                <Menu as="div" className="relative ml-5">
+                  <div>
+                    <Menu.Button className="relative flex rounded-full  text-md">
+                      <span className="absolute -inset-1.5" />
+                      <span className="sr-only">Open user menu</span>
+                     <h1 className="text-gray-700 text-md font-medium">Services ▾</h1>
+                    </Menu.Button>
+                  </div>
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-100"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
+                  >
+                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="/cloud"
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          >
+                            Cloud Services
+                          </a>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="managed-it"
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          >
+                            Managed IT Services
+                          </a>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="/security"
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          >
+                            Security Services
+                          </a>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="/software"
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          >
+                            Software Development
+                          </a>
+                        )}
+                      </Menu.Item>
+                    </Menu.Items>
+                  </Transition>
+                </Menu>
+                <Menu as="div" className="relative ml-5">
+                  <div>
+                    <Menu.Button className="relative flex rounded-full  text-md">
+                      <span className="absolute -inset-1.5" />
+                      <span className="sr-only">Open user menu</span>
+                     <h1 className="text-gray-700 text-md font-medium">Products ▾</h1>
+                    </Menu.Button>
+                  </div>
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-100"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
+                  >
+                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="/"
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          >
+                            Cyber Aware Security
+                          </a>
+                        )}
+                      </Menu.Item>
+                     
+                     
+                    </Menu.Items>
+                  </Transition>
+                </Menu>
+                <Menu as="div" className="relative ml-5">
+                  <div>
+                    <Menu.Button className="relative flex rounded-full  text-md">
+                      <span className="absolute -inset-1.5" />
+                      <span className="sr-only">Open user menu</span>
+                     <h1 className="text-gray-700 text-md font-medium">Courses ▾</h1>
+                    </Menu.Button>
+                  </div>
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-100"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
+                  >
+                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="/"
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          >
+                            Cloud Security
+                          </a>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="/"
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          >
+                            Cyber Offence & Defence
+                          </a>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="/"
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          >
+                            DevOps
+                          </a>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="/"
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          >
+                            Data Privacy
+                          </a>
+                        )}
+                      </Menu.Item>
+                    </Menu.Items>
+                  </Transition>
+                </Menu>
+            
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
+
+          <Disclosure.Panel className="sm:hidden">
+            <div className="space-y-1 px-2 pb-3 pt-2">
+              {navigation.map((item) => (
+                <Disclosure.Button
+                  key={item.name}
+                  as="a"
+                  href={item.href}
+                  className={classNames(
+                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    'block rounded-md px-3 py-2 text-base font-medium'
+                  )}
+                  aria-current={item.current ? 'page' : undefined}
+                >
+                  {item.name}
+                </Disclosure.Button>
+              ))}
+            </div>
+            
+          </Disclosure.Panel>
+        </>
+      )}
+    </Disclosure>
+
+
+
+
+
+
+
+
+
+
+
+      
     </>
   );
 }
