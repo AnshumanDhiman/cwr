@@ -4,14 +4,35 @@ import logo from "../assets/logo.svg";
 import logo1 from "../assets/logo1.png";
 
 export default function Navbar() {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const handleDropdownLinkClick = () => {
+  const [isDropdownOpen1, setIsDropdownOpen1] = useState(false);
+  const [isDropdownOpen2, setIsDropdownOpen2] = useState(false);
+  const [isDropdownOpen3, setIsDropdownOpen3] = useState(false);
+
+  const handleDropdownLinkClick1 = () => {
     closeMenu();
-    toggleDropdown();
+    toggleDropdown1();
   };
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+  const handleDropdownLinkClick2 = () => {
+    closeMenu();
+    toggleDropdown2();
+  };
+
+  const handleDropdownLinkClick3 = () => {
+    closeMenu();
+    toggleDropdown2();
+  };
+
+  const toggleDropdown1 = () => {
+    setIsDropdownOpen1(!isDropdownOpen1);
+  };
+
+  const toggleDropdown2 = () => {
+    setIsDropdownOpen2(!isDropdownOpen2);
+  };
+
+  const toggleDropdown3 = () => {
+    setIsDropdownOpen3(!isDropdownOpen3);
   };
 
   return (
@@ -20,8 +41,8 @@ export default function Navbar() {
         <div className="container px-24 py-6 mx-auto md:flex md:justify-between md:items-center">
           <div className="flex items-center justify-between">
             <Link to="/">
-              <img className="w-auto h-[3.5rem] inline" src={logo1} alt="" />
-              <h1 className="text-2xl text-gray-800 font-bold space-x-4 inline ml-[10px]">
+              <img className="w-auto h-[2.75rem] inline" src={logo1} alt="" />
+              <h1 className="text-2xl text-gray-800 font-bold space-x-4 inline ml-[20px]">
                 CWR Technologies
               </h1>
             </Link>
@@ -50,29 +71,29 @@ export default function Navbar() {
                 About
               </NavLink>
               <NavLink
-                onClick={toggleDropdown}
+                onClick={toggleDropdown1}
                 className="my-2 transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
               >
                 <span className="relative">Services ▾</span>
               </NavLink>
-              {isDropdownOpen && (
+              {isDropdownOpen1 && (
                 <ul className="dropdown-list absolute  bg-white shadow-xl mt-10 ml-40 border-2 ">
                   <NavLink
                     to="/cloud"
-                    onClick={handleDropdownLinkClick}
+                    onClick={handleDropdownLinkClick1}
                   >
                     <li className=" bg-white hover:bg-blue-700 hover:text-white p-4">
                       Cloud Services
                     </li>
                   </NavLink>
-                  <NavLink to="/managed-it" onClick={handleDropdownLinkClick}>
+                  <NavLink to="/managed-it" onClick={handleDropdownLinkClick1}>
                     <li className=" bg-white hover:bg-blue-700 hover:text-white p-4">
                       Managed IT Services
                     </li>
                   </NavLink>
                   <NavLink
                     to="/security"
-                    onClick={handleDropdownLinkClick}
+                    onClick={handleDropdownLinkClick1}
                   >
                     <li className=" bg-white hover:bg-blue-700 hover:text-white p-4">
                       Security Services
@@ -80,7 +101,7 @@ export default function Navbar() {
                   </NavLink>
                   <NavLink
                     to="/software"
-                    onClick={handleDropdownLinkClick}
+                    onClick={handleDropdownLinkClick1}
                   >
                     <li className=" bg-white hover:bg-blue-700 hover:text-white p-4">
                       Software Development
@@ -90,15 +111,66 @@ export default function Navbar() {
               )}
 
               <NavLink
-                to="/trainings"
-                className={({ isActive }) =>
-                  isActive
-                    ? "my-2 transition-colors duration-300 transform text-blue-500 md:mx-4 md:my-0"
-                    : "my-2 text-gray-700 transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
-                }
+                onClick={toggleDropdown2}
+                className="my-2 transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
               >
-                Trainings
+                <span className="relative">Products ▾</span>
               </NavLink>
+              {isDropdownOpen2 && (
+                <ul className="dropdown-list absolute  bg-white shadow-xl mt-10 ml-[46%] border-2 ">
+                  <NavLink
+                    to="/cloud"
+                    onClick={handleDropdownLinkClick2}
+                  >
+                    <li className=" bg-white hover:bg-blue-700 hover:text-white p-4">
+                      Cyber Aware Security
+                    </li>
+                  </NavLink>
+                  </ul>
+              )}
+
+              <NavLink
+                onClick={toggleDropdown3}
+                className="my-2 transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
+              >
+                <span className="relative">Courses ▾</span>
+              </NavLink>
+              {isDropdownOpen3 && (
+                <ul className="dropdown-list absolute  bg-white shadow-xl mt-10 ml-[60%] border-2 ">
+                  <NavLink
+                    to="/cloud"
+                    onClick={handleDropdownLinkClick3}
+                  >
+                    <li className=" bg-white hover:bg-blue-700 hover:text-white p-4">
+                      Cloud Security
+                    </li>
+                  </NavLink>
+                  <NavLink to="/managed-it" onClick={handleDropdownLinkClick3}>
+                    <li className=" bg-white hover:bg-blue-700 hover:text-white p-4">
+                      Cyber Offence & Defence
+                    </li>
+                  </NavLink>
+                  <NavLink
+                    to="/security"
+                    onClick={handleDropdownLinkClick3}
+                  >
+                    <li className=" bg-white hover:bg-blue-700 hover:text-white p-4">
+                      DevOps
+                    </li>
+                  </NavLink>
+                  <NavLink
+                    to="/software"
+                    onClick={handleDropdownLinkClick3}
+                  >
+                    <li className=" bg-white hover:bg-blue-700 hover:text-white p-4">
+                      Data Privacy
+                    </li>
+                  </NavLink>
+                </ul>
+              )}
+
+
+             
               <NavLink
                 to="/contact"
                 className={({ isActive }) =>
