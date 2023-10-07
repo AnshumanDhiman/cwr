@@ -13,8 +13,8 @@ export default function Navbar() {
 
 const navigation = [
   { name: 'Home', href: '/', current: true },
-  { name: 'About', href: '/about', current: false },
-  { name: 'Contact', href: '/contact', current: false },
+  // { name: 'About', href: '/about', current: false },
+  // { name: 'Contact', href: '/contact', current: false },
 ]
 
 function classNames(...classes) {
@@ -29,7 +29,7 @@ function classNames(...classes) {
     <Disclosure as="nav" className="">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-4">
+          <div className="mx-auto w-[92%] px-2 sm:px-6 lg:px-4">
             <div className="relative flex h-20 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -44,14 +44,17 @@ function classNames(...classes) {
                 </Disclosure.Button>
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <a href='/'>
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="h-10 w-auto"
                     src={logo1}
                     alt="Your Company"
                   />
-                  <h1 className="ml-4 text-gray-700 font-bold text-2xl">CWR Technologies</h1>
+                  <h1 className="ml-2 text-gray-700 font-bold text-2xl">CWR Technologies</h1>
+                  
                 </div>
+                </a>
               </div>
 
 
@@ -79,7 +82,7 @@ function classNames(...classes) {
                     <Menu.Button className="relative flex rounded-full  text-md">
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">Open user menu</span>
-                     <h1 className="text-gray-700 text-md font-medium">Services ▾</h1>
+                     <h1 className="text-gray-700 text-md font-medium">Solutions ▾</h1>
                     </Menu.Button>
                   </div>
                   <Transition
@@ -98,10 +101,54 @@ function classNames(...classes) {
                             href="/cloud"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            Cloud Services
+                            Cloud Solutions
                           </a>
                         )}
                       </Menu.Item>
+                     
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="/security"
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          >
+                            Cybersecurity Solutions
+                          </a>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="/software"
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          >
+                            Software Development
+                          </a>
+                        )}
+                      </Menu.Item>
+                    </Menu.Items>
+                  </Transition>
+                </Menu>
+                <Menu as="div" className="relative ml-5">
+                  <div>
+                    <Menu.Button className="relative flex rounded-full  text-md">
+                      <span className="absolute -inset-1.5" />
+                      <span className="sr-only">Open user menu</span>
+                     <h1 className="text-gray-700 text-md font-medium">Services ▾</h1>
+                    </Menu.Button>
+                  </div>
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-100"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
+                  >
+                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                   
+                     
                       <Menu.Item>
                         {({ active }) => (
                           <a
@@ -118,7 +165,7 @@ function classNames(...classes) {
                             href="/security"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            Security Services
+                            Security Audit & Assesment
                           </a>
                         )}
                       </Menu.Item>
@@ -128,7 +175,7 @@ function classNames(...classes) {
                             href="/software"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            Software Development
+                            Risk & Compliance
                           </a>
                         )}
                       </Menu.Item>
