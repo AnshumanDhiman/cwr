@@ -14,9 +14,9 @@ export default function Software() {
              
               </h1>
 
-              <p className="mt-3 text-white">
+              {/* <p className="mt-3 text-white">
               We build secure Cloud Solutions that target your business needs
-              </p>
+              </p> */}
             </div>
 
             <div className="flex items-center justify-center w-full mt-0 lg:w-1/2">
