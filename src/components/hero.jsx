@@ -1,8 +1,6 @@
-  import heroImg from "../assets/working.svg";
+
   import Card from "./cards";
 
-  import HeroImg from '../assets/Hero.jpg'
-import Building from '../assets/buildings.jpg'
 
   export default function Hero() {
     return (
