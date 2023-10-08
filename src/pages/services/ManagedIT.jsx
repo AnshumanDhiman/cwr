@@ -36,7 +36,7 @@ export default function ManagedIT() {
       >
         <h1 className="text-2xl font-bold bg-white text-justifyt">Monitoring Services</h1>
        
-        <p className="py-4 bg-white text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p className="py-4 bg-white text-left text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <button className='text-sm px-4 py-2 font-sm text-white capitalize transition-colors duration-300 transform bg-orange-700 rounded-lg hover:bg-orange-600 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80'>Explore More</button>
       </div>
      

@@ -16,7 +16,13 @@ export default {
         'theme_7': '',
         
       }, 
+      backgroundImage: {
+        'hero': "url('/src/assets/h.png')",
+        'cs': "url('/src/assets/cloud.png')",
+        'sd':"url('/src/assets/sd.jpg')"
+      }
     },
   },
   plugins: [],
 }
+

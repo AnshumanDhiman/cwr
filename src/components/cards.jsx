@@ -12,8 +12,8 @@ function Card() {
       <div
         className="p-8 rounded-2xl shadow-xl bg-white cursor-pointer transition ease-in-out hover:scale-110 border-t-[16px] border-[#92D050] "
       >
-        <h1 className="text-2xl font-bold bg-white text-left">Cloud Solutions</h1>
-        <p className="py-4 bg-white text-left">Get the right information at the Right time to enable your business to take the Right decision.
+        <h1 className="text-2xl font-semibold text-gray-700 capitalize">Cloud Solutions</h1>
+        <p className="py-4 bg-white text-left text-gray-500">Get the right information at the Right time to enable your business to take the Right decision.
         </p>
         <BsArrowRight className='relative top-[6%] text-2xl left-[85%] text-[#3366CC] '/>
       </div>
@@ -22,8 +22,8 @@ function Card() {
       <div
         className="p-8 rounded-2xl shadow-xl bg-white cursor-pointer transition ease-in-out hover:scale-110 border-t-[16px] border-[#EA1179] "
       >
-        <h1 className="text-2xl font-bold bg-white text-left">Cybersecurity Solutions</h1>
-        <p className="py-4 bg-white text-left">Hands-on experience with diverse Industries, Geographies and new Technologies up to date with xyz.</p>
+        <h1 className="text-2xl font-semibold text-gray-700 capitalize">Cybersecurity Solutions</h1>
+        <p className="py-4 bg-white text-left text-gray-500">Hands-on experience with diverse Industries, Geographies and new Technologies up to date with xyz.</p>
         <BsArrowRight className='relative top-[6%] text-2xl left-[85%] text-[#3366CC] '/>
       </div>
       </a>
@@ -31,8 +31,8 @@ function Card() {
       <div
         className="p-8 rounded-2xl shadow-xl bg-white cursor-pointer transition ease-in-out hover:scale-110 border-t-[16px] border-[#9400FF] "
       >
-        <h1 className="text-2xl font-bold bg-white text-left">Software Development</h1>
-        <p className="py-4 bg-white text-left">Vast experience in complex business environments with diverse industries and their solutions.</p>
+        <h1 className="text-2xl font-semibold text-gray-700 capitalize">Software Development</h1>
+        <p className="py-4 bg-white text-left text-gray-500">Vast experience in complex business environments with diverse industries and their solutions.</p>
         
         <BsArrowRight className='relative top-[6%]  text-2xl left-[85%] text-[#3366CC] '/>
       </div>
@@ -44,8 +44,8 @@ function Card() {
       <div
         className="p-8 rounded-2xl shadow-xl bg-white cursor-pointer transition ease-in-out hover:scale-110 border-t-[16px] border-[#92D050] "
       >
-        <h1 className="text-2xl font-bold bg-white text-left">Managed IT Services</h1>
-        <p className="py-4 bg-white text-left">Get the right information at the Right time to enable your business to take the Right decision.
+        <h1 className="text-2xl font-semibold text-gray-700 capitalize">Managed IT Services</h1>
+        <p className="py-4 bg-white text-left text-gray-500">Get the right information at the Right time to enable your business to take the Right decision.
         </p>
         <BsArrowRight className='relative top-[6%] text-2xl left-[85%] text-[#3366CC] '/>
       </div>
@@ -54,8 +54,8 @@ function Card() {
       <div
         className="p-8 rounded-2xl shadow-xl bg-white cursor-pointer transition ease-in-out hover:scale-110 border-t-[16px] border-[#EA1179] "
       >
-        <h1 className="text-2xl font-bold bg-white text-left">Security Audit & Assesment</h1>
-        <p className="py-4 bg-white text-left">Hands-on experience with diverse Industries, Geographies and new Technologies up to date with xyz.</p>
+        <h1 className="text-2xl font-semibold text-gray-700 capitalize">Security Audit & Assesment</h1>
+        <p className="py-4 bg-white text-left text-gray-500">Hands-on experience with diverse Industries, Geographies and new Technologies up to date with xyz.</p>
         <BsArrowRight className='relative top-[6%] text-2xl left-[85%] text-[#3366CC] '/>
       </div>
       </a>
@@ -63,8 +63,8 @@ function Card() {
       <div
         className="p-8 rounded-2xl shadow-xl bg-white cursor-pointer transition ease-in-out hover:scale-110 border-t-[16px] border-[#9400FF] "
       >
-        <h1 className="text-2xl font-bold bg-white text-left">Risk & Compliance</h1>
-        <p className="py-4 bg-white text-left">Vast experience in complex business environments with diverse industries and their solutions.</p>
+        <h1 className="text-2xl font-semibold text-gray-700 capitalize">Risk & Compliance</h1>
+        <p className="py-4 bg-white text-left text-gray-500">Vast experience in complex business environments with diverse industries and their solutions.</p>
         
         <BsArrowRight className='relative top-[6%]  text-2xl left-[85%] text-[#3366CC] '/>
       </div>
