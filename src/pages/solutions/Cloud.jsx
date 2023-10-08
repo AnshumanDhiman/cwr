@@ -1,6 +1,6 @@
 import React from 'react'
 import heroImg from "../../assets/cloud.svg";
-import CS from '../../assets/Cloud.png'
+
 
 import {BsArrowRight} from 'react-icons/bs'
 export default function Cloud() {
