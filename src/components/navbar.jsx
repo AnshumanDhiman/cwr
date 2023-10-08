@@ -57,7 +57,7 @@ function classNames(...classes) {
                     src={logo1}
                     alt="Your Company"
                   />
-                  <h1 className="ml-2 text-gray-700 font-bold text-2xl">CWR Technologies</h1>
+                  <h1 className="ml-2 text-gray-700 font-semibold text-2xl">CWR Technologies</h1>
                   
                 </div>
                 </a>
@@ -168,7 +168,7 @@ function classNames(...classes) {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="/security"
+                            href="/security-audit-assesment"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Security Audit & Assesment
@@ -178,7 +178,7 @@ function classNames(...classes) {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="/software"
+                            href="/risk-compliance"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Risk & Compliance
