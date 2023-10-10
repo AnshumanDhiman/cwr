@@ -36,8 +36,9 @@
             </div>
           </div>
         </div>
+       
       
-          <div className="grid grid-cols-2 place-items-center mt-[-11%] gap-16 px-32">
+          {/* <div className="grid grid-cols-2 place-items-center mt-[-11%] gap-16 px-32">
             <div class="max-w-2xl px-8 py-8 bg-white rounded-lg shadow-md  border-blue-800 border-t-[16px] ">
               
 
@@ -84,7 +85,7 @@
               
             </div>
             
-          </div>
+          </div> */}
 
     
         
