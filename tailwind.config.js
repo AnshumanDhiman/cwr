@@ -17,8 +17,8 @@ export default {
         
       }, 
       backgroundImage: {
-        'hero': "url('/src/assets/h.png')",
-        'cs': "url('/src/assets/cloud.png')",
+        'hero': "url('/src/assets/26316.jpg')",
+        'cs': "url('/src/assets/8058.png')",
         'sd':"url('/src/assets/sd.jpg')"
       }
     },
