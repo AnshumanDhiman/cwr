@@ -73,7 +73,7 @@ function classNames(...classes) {
                         href={item.href}
                         className={classNames(
                           item.current ? 'text-gray-700 transition-colors duration-300 transform hover:text-blue-500' : 'text-gray-700 transition-colors duration-300 transform hover:text-blue-500',
-                          'rounded-md px-3 py-2 text-md font-medium'
+                          'rounded-md px-3 py-2 text-md '
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
@@ -88,7 +88,7 @@ function classNames(...classes) {
                     <Menu.Button className="relative flex rounded-full  text-md">
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">Open user menu</span>
-                     <h1 className="text-gray-700 text-md font-medium">Solutions ▾</h1>
+                     <h1 className="text-gray-700 text-md ">Solutions ▾</h1>
                     </Menu.Button>
                   </div>
                   <Transition
@@ -140,7 +140,7 @@ function classNames(...classes) {
                     <Menu.Button className="relative flex rounded-full  text-md">
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">Open user menu</span>
-                     <h1 className="text-gray-700 text-md font-medium">Services ▾</h1>
+                     <h1 className="text-gray-700 text-md">Services ▾</h1>
                     </Menu.Button>
                   </div>
                   <Transition
@@ -193,7 +193,7 @@ function classNames(...classes) {
                     <Menu.Button className="relative flex rounded-full  text-md">
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">Open user menu</span>
-                     <h1 className="text-gray-700 text-md font-medium">Products ▾</h1>
+                     <h1 className="text-gray-700 text-md">Products ▾</h1>
                     </Menu.Button>
                   </div>
                   <Transition
@@ -226,7 +226,7 @@ function classNames(...classes) {
                     <Menu.Button className="relative flex rounded-full  text-md">
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">Open user menu</span>
-                     <h1 className="text-gray-700 text-md font-medium">Courses ▾</h1>
+                     <h1 className="text-gray-700 text-md">Courses ▾</h1>
                     </Menu.Button>
                   </div>
                   <Transition
@@ -290,7 +290,7 @@ function classNames(...classes) {
                         href={item.href}
                         className={classNames(
                           item.current ? 'text-gray-700 transition-colors duration-300 transform hover:text-blue-500' : 'text-gray-700 transition-colors duration-300 transform hover:text-blue-500',
-                          'rounded-md px-3 py-2 text-md font-medium'
+                          'rounded-md px-3 py-2 text-md'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
