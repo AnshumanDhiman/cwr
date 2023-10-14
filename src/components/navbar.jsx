@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import logo from "../assets/logo.svg";
-import logo1 from "../assets/logo1.png";
+import logo1 from "../assets/11.png";
 
   
     
@@ -53,11 +53,11 @@ function classNames(...classes) {
               <a href='/'>
                 <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="h-10 w-auto"
+                    className="h-20 w-auto"
                     src={logo1}
                     alt="Your Company"
                   />
-                  <h1 className="ml-2 text-gray-700 font-semibold text-2xl">CWR Technologies</h1>
+                  {/* <h1 className="ml-2 text-white font-semibold text-2xl">CWR Technologies</h1> */}
                   
                 </div>
                 </a>
@@ -72,7 +72,7 @@ function classNames(...classes) {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'text-gray-700 transition-colors duration-300 transform hover:text-blue-500' : 'text-gray-700 transition-colors duration-300 transform hover:text-blue-500',
+                          item.current ? 'text-white transition-colors duration-300 transform hover:text-blue-500' : 'text-white transition-colors duration-300 transform hover:text-blue-500',
                           'rounded-md px-3 py-2 text-md '
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -88,7 +88,7 @@ function classNames(...classes) {
                     <Menu.Button className="relative flex rounded-full  text-md">
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">Open user menu</span>
-                     <h1 className="text-gray-700 text-md ">Solutions ▾</h1>
+                     <h1 className="text-white text-md ">Solutions ▾</h1>
                     </Menu.Button>
                   </div>
                   <Transition
@@ -140,7 +140,7 @@ function classNames(...classes) {
                     <Menu.Button className="relative flex rounded-full  text-md">
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">Open user menu</span>
-                     <h1 className="text-gray-700 text-md">Services ▾</h1>
+                     <h1 className="text-white text-md">Services ▾</h1>
                     </Menu.Button>
                   </div>
                   <Transition
@@ -193,7 +193,7 @@ function classNames(...classes) {
                     <Menu.Button className="relative flex rounded-full  text-md">
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">Open user menu</span>
-                     <h1 className="text-gray-700 text-md">Products ▾</h1>
+                     <h1 className="text-white text-md">Products ▾</h1>
                     </Menu.Button>
                   </div>
                   <Transition
@@ -226,7 +226,7 @@ function classNames(...classes) {
                     <Menu.Button className="relative flex rounded-full  text-md">
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">Open user menu</span>
-                     <h1 className="text-gray-700 text-md">Courses ▾</h1>
+                     <h1 className="text-white text-md">Courses ▾</h1>
                     </Menu.Button>
                   </div>
                   <Transition
@@ -289,7 +289,7 @@ function classNames(...classes) {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'text-gray-700 transition-colors duration-300 transform hover:text-blue-500' : 'text-gray-700 transition-colors duration-300 transform hover:text-blue-500',
+                          item.current ? 'text-white transition-colors duration-300 transform hover:text-blue-500' : 'text-white transition-colors duration-300 transform hover:text-blue-500',
                           'rounded-md px-3 py-2 text-md'
                         )}
                         aria-current={item.current ? 'page' : undefined}
