@@ -4,7 +4,7 @@ import Card from "./cards";
 export default function Hero() {
   return (
     <>
-      <div className="relative grid w-full bg-hero bg-no-repeat bg-cover h-[35rem] items-center z-[-999]">
+      <div className="relative grid w-full bg-hero bg-no-repeat bg-cover top-[-80px] h-[35rem] items-center z-[-999] opacity-[100%]">
         <div className="px-[5%] py-8">
           <div className="items-center flex">
             <div className="w-full lg:w-1/2">
@@ -19,18 +19,10 @@ export default function Hero() {
                 <br /> target your business needs
               </p>
             </div>
-
-            {/* <div className="flex items-center justify-center mt-[-2.35%] w-full mr-[-5.58%] ml-[25%]">
-                <img
-                  className="w-full h-[35rem] object-cover"
-                  src={Building}
-                  alt="image showing working culture"
-                />
-              </div> */}
           </div>
         </div>
       </div>
-      <p className="py-8 px-32 text-lg bg-white text-center text-gray-600  tracking-wider">
+      <p className="px-32 mt-[-40px] text-lg bg-white text-center text-gray-900  tracking-wider">
           We provide end to end Digital Transformation Consultancy Services to
           evolve your business and achieve agility. Every core team member has
           20+ years of experience in Information Technology with diverse
@@ -39,8 +31,8 @@ export default function Hero() {
           away your day-to-day IT challenges.</p>
       <div className=" grid grid-cols-2 place-items-center">
       <div className="pl-32">
-        <h1 className="text-3xl font-bold">What does agility mean to your business?</h1><br />
-          <p className="bg-white text-justify text-gray-600 tracking-wider">
+        <h1 className="text-3xl font-bold text-gray-800">What does agility mean to your <span className=" text-blue-500 ">Business?</span></h1><br />
+          <p className="bg-white text-md text-left text-gray-900 ">
           If technology is not agile then we can’t have an agile business.
           Become responsive to customers/user needs, production needs,
           provisioning rapidly and bring down delivery of product and services
@@ -53,7 +45,7 @@ export default function Hero() {
           <img src={HeroImg} />
         </div>
       </div>
-      <h1 class="pl-32 pt-8 text-2xl font-bold text-gray-700">
+      <h1 class="pl-32 pt-8 text-2xl font-bold text-gray-800">
         Roadmap to better Decision-Making
       </h1>
       <p class="pl-32 bg-white text-justify text-gray-600">
