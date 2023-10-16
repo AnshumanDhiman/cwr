@@ -3,18 +3,20 @@ import Contact from "./pages/Contact";
 import Services from "./pages/Services";
 import Solutions from "./pages/Solutions";
 import Home from "./pages/home";
-import Cloud from './pages/solutions/Cloud'
-import ManagedIT from './pages/services/ManagedIT'
-import Security from './pages/solutions/Security'
-import Risk from './pages/services/Risk&Compliance'
+import Cloud from "./pages/solutions/Cloud";
+import ManagedIT from "./pages/services/ManagedIT";
+import Security from "./pages/solutions/Security";
+import Risk from "./pages/services/Risk&Compliance";
 import SecurityAudit from "./pages/services/SecurityAudit";
-import Software from './pages/solutions/Software'
+import Software from "./pages/solutions/Software";
 import { Route, Routes } from "react-router-dom";
 import Notfound from "./pages/Notfound";
+import Navbar from "./components/navbar";
 
 function App() {
   return (
     <>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
